@@ -184,39 +184,105 @@ void move(int who, int move)
 int winner(int computer, int player)
 {
 	int senario;
-	/* todo - determine the winner; use switch statements */
 	if (computer == player){
 		senario = 0;
-	} else if (computer == ROCK && player == LIZARD){
-		senario = 1;
-	} else if (computer == ROCK && player == SPOCK){
-		senario = 2;
-	} else if (computer == ROCK && player == SCISSORS){
-		senario = 3;
-	} else if (computer == ROCK && player == PAPER){
-		senario = 4;
-	} else if (computer == PAPER && player == SCISSORS){
-		senario = 5;
-	} else if (computer == PAPER && player == LIZARD){
-		senario = 6;
-	} else if (computer == PAPER && player == SPOCK){
-		senario = 7;
-	} else if (computer == SPOCK && player == SCISSORS){
-		senario = 8;
-	} else if (computer == SPOCK && player == LIZARD){
-		senario = 9;
-	} else if (computer == LIZARD && player == SCISSORS){
-		senario = 10;
-	} else if (player == ROCK && computer == LIZARD){
-		senario = 11;
-	} else if (player == ROCK && computer == SPOCK){
-		senario == 12;
-	} else if (player == ROCK && computer == SCISSORS){
-		senario == 13;
-	} else if (player == ROCK && computer == PAPER){
-		senario == 14;
-	} else {
-		senario == 15;
+		return senario;
+	}
+	// Odd = player victory; even = computer victory.
+	switch (computer)
+	{
+	case ROCK:
+		switch (player)
+		{
+			case SPOCK:
+				senario = 1;
+				break;
+			case PAPER:
+				senario = 3;
+				break;
+			case LIZARD:
+				senario = 2;
+				break;
+			case SCISSORS:
+				senario = 4;
+				break;
+
+		}
+		break;
+	case PAPER:
+		switch (player)
+		{
+			case ROCK:
+				senario = 6;
+				break;
+			case SPOCK:
+				senario = 8;
+				break;
+			case SCISSORS:
+				senario = 5;
+				break;
+			case LIZARD:
+				senario = 7;
+				break;
+		}
+		break;
+	case SPOCK:
+		switch (player)
+		{
+			case PAPER:
+				senario = 9;
+				break;
+			case ROCK:
+				senario = 10;
+				break;
+			case LIZARD:
+				senario = 11;
+				break;
+			case SCISSORS:
+				senario = 12;
+				break;
+		
+		}
+		break;
+	case LIZARD:
+		switch (player)
+		{
+			case PAPER:
+				senario = 14;
+				break;
+			case ROCK:
+				senario = 13;
+				break;
+			case SPOCK:
+				senario = 15;
+				break;
+			case SCISSORS:
+				senario = 16;
+				break;
+		
+		}
+		break;
+	case SCISSORS:
+		switch (player)
+		{
+			case PAPER:
+				senario = 17;
+				break;
+			case ROCK:
+				senario = 18;
+				break;
+			case SPOCK:
+				senario = 20;
+				break;
+			case LIZARD:
+				senario = 19;
+				break;
+		
+		}
+		break;
+	
+	default:
+		break;
 	}
 	return senario;
 }
@@ -247,6 +313,43 @@ void print_winner(int senario, int comp_move, int player_move)
     Spock vaporizes rock
     Rock crushes scissors
 */
+	if (senario = 0){
+		print("An eternal battle with the same thing ensues.");
+		again();
+	} else {
+		switch (senario%2)
+		{
+		case 0:
+			printf("Player wins!");
+			break;
+		
+		case 1:
+			printf("Computer wins!");
+			break;
+		}	
+	}
+
+	switch (senario)
+	{
+	case 1:
+	case 10:
+		printf("Spock vaporizes rock.");
+		break;
+	case 3:
+	case 6:
+		printf("Paper covers rock.");
+		break;
+	case 2:
+	case 13:
+		printf("Rock crushes Lizard.");
+		break;
+	case 4:
+	case 18:
+		printf("Rock crushes scissors.");
+		break;
+	default:
+		break;
+	}
 }
 
 /**
@@ -257,6 +360,36 @@ void print_winner(int senario, int comp_move, int player_move)
 int nrand(int range)
 {
 	return rand() % range;
+}
+
+/**
+ * Asks the user if they would like to play a second time or not
+ * if they say yes it will call main again. Otherwise it closes
+ * the program.
+ */
+void again()
+{
+	int tmp;
+	int again;
+	printf("Play again? \nY - Yes \n N - No");
+	while ((tmp = getchar()) != '\n')
+		if (tmp > 94){
+		again = tmp - 32;
+		} else {
+		again = tmp;
+		}
+	switch (again)
+	{
+		case 'Y':
+			main();
+			break;
+	
+		default:
+			printf("Closing...");
+			exit(0);
+			break;
+	}
+		
 }
 
 /**
