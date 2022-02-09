@@ -320,11 +320,11 @@ void print_winner(int senario, int comp_move, int player_move)
 		switch (senario%2)
 		{
 		case 0:
-			printf("Player wins!");
+			printf("Player wins!\n");
 			break;
 		
 		case 1:
-			printf("Computer wins!");
+			printf("Computer wins!\n");
 			break;
 		}	
 	}
@@ -347,6 +347,26 @@ void print_winner(int senario, int comp_move, int player_move)
 	case 18:
 		printf("Rock crushes scissors.");
 		break;
+	case 8:
+	case 9:
+		printf("Paper disproves Spock.");
+		break;
+	case 5:
+	case 17:
+		printf("Scissors cuts papers.");
+		break;
+	case 7:
+	case 14:
+		printf("Lizard eats paper.");
+	case 11:
+	case 15:
+		printf("Lizard poisons Spock");
+	case 12:
+	case 20:
+		printf("Spock smashes Scissors.");
+	case 16:
+	case 19:
+		printf("Scissors decapitates lizard.");
 	default:
 		break;
 	}
