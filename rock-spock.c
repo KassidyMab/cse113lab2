@@ -30,6 +30,7 @@ int nrand(int range);
 void seed();
 int pinput(void);
 int pcheck(int player);
+void again(void);
 
 
 int main(void)
@@ -43,7 +44,6 @@ int main(void)
 	seed();
 
 	player = pinput();
-	/* todo -- exit from program when player selects 5 */
 	/* otherwise play a game of rock-paper-scissors-lizard-spock */
 
         /* debug -- you don't need move() to play game  */
@@ -73,12 +73,7 @@ int main(void)
 	move(COMPUTER, computer);
 
 	senario = winner(computer, player);
-
-
-        /* todo --implement function winner() */
-        /* todo --implement function print_winner() */
-	printf("todo -- who wins? implement the winner with switch statements\n");
-	return 0;
+	print_winner(senario, computer, player);
 }
 
 /**
@@ -254,7 +249,7 @@ int winner(int computer, int player)
 				senario = 13;
 				break;
 			case SPOCK:
-				senario = 15;
+				senario = 18;
 				break;
 			case SCISSORS:
 				senario = 16;
@@ -266,16 +261,16 @@ int winner(int computer, int player)
 		switch (player)
 		{
 			case PAPER:
-				senario = 17;
+				senario = 22;
 				break;
 			case ROCK:
-				senario = 18;
+				senario = 21;
 				break;
 			case SPOCK:
-				senario = 20;
+				senario = 19;
 				break;
 			case LIZARD:
-				senario = 19;
+				senario = 20;
 				break;
 		
 		}
@@ -296,25 +291,8 @@ int winner(int computer, int player)
  */
 void print_winner(int senario, int comp_move, int player_move)
 {
-    /* todo - use a switch statement
-
-    print Computer Wins! or Player Wins!
-
-    And how they won. Use the phrases below
-
-    Scissors cuts paper
-    Paper covers rock
-    Rock crushes lizard
-    Lizard poisons Spock
-    Spock smashes scissors
-    Scissors decapitates lizard
-    Lizard eats paper
-    Paper disproves Spock
-    Spock vaporizes rock
-    Rock crushes scissors
-*/
 	if (senario = 0){
-		print("An eternal battle with the same thing ensues.");
+		printf("An eternal battle with the same thing ensues.");
 		again();
 	} else {
 		switch (senario%2)
@@ -344,7 +322,7 @@ void print_winner(int senario, int comp_move, int player_move)
 		printf("Rock crushes Lizard.");
 		break;
 	case 4:
-	case 18:
+	case 21:
 		printf("Rock crushes scissors.");
 		break;
 	case 8:
@@ -352,24 +330,25 @@ void print_winner(int senario, int comp_move, int player_move)
 		printf("Paper disproves Spock.");
 		break;
 	case 5:
-	case 17:
+	case 22:
 		printf("Scissors cuts papers.");
 		break;
 	case 7:
 	case 14:
 		printf("Lizard eats paper.");
 	case 11:
-	case 15:
+	case 18:
 		printf("Lizard poisons Spock");
 	case 12:
-	case 20:
+	case 19:
 		printf("Spock smashes Scissors.");
 	case 16:
-	case 19:
+	case 20:
 		printf("Scissors decapitates lizard.");
 	default:
 		break;
 	}
+	again();
 }
 
 /**
@@ -387,7 +366,7 @@ int nrand(int range)
  * if they say yes it will call main again. Otherwise it closes
  * the program.
  */
-void again()
+void again(void)
 {
 	int tmp;
 	int again;
