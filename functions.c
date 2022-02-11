@@ -152,7 +152,7 @@ float interior_angle(int angles)
  */
 float area_regular_polygon(int side, int angles)
 {
-        return (pow(side, 2) * angles / (4 * tan(M_PI / side)));
+        return (pow(side, 2) * angles / (4 * tan(M_PI / angles)));
 }
 
 
@@ -192,7 +192,7 @@ int prompt(int request)
         scanf("%d", &val);
         if (val < 0){
                 printf("Error| negatives do not mathematically work in "
-                "shapes.");
+                "shapes.\n");
         }
         return val;
 }
