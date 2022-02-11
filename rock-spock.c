@@ -291,7 +291,8 @@ int winner(int computer, int player)
  */
 void print_winner(int senario, int comp_move, int player_move)
 {
-	if (senario = 0){
+
+	if (senario == 0){
 		printf("An eternal battle with the same thing ensues.");
 		again();
 	} else {
@@ -306,46 +307,50 @@ void print_winner(int senario, int comp_move, int player_move)
 			break;
 		}	
 	}
-
 	switch (senario)
 	{
 	case 1:
 	case 10:
-		printf("Spock vaporizes rock.");
+		printf("Spock vaporizes rock.\n");
 		break;
 	case 3:
 	case 6:
-		printf("Paper covers rock.");
+		printf("Paper covers rock.\n");
 		break;
 	case 2:
 	case 13:
-		printf("Rock crushes Lizard.");
+		printf("Rock crushes Lizard.\n");
 		break;
 	case 4:
 	case 21:
-		printf("Rock crushes scissors.");
+		printf("Rock crushes scissors.\n");
 		break;
 	case 8:
 	case 9:
-		printf("Paper disproves Spock.");
+		printf("Paper disproves Spock.\n");
 		break;
 	case 5:
 	case 22:
-		printf("Scissors cuts papers.");
+		printf("Scissors cuts papers.\n");
 		break;
 	case 7:
 	case 14:
-		printf("Lizard eats paper.");
+		printf("Lizard eats paper.\n");
+		break;
 	case 11:
 	case 18:
-		printf("Lizard poisons Spock");
+		printf("Lizard poisons Spock\n");
+		break;
 	case 12:
 	case 19:
-		printf("Spock smashes Scissors.");
+		printf("Spock smashes Scissors.\n");
+		break;
 	case 16:
 	case 20:
-		printf("Scissors decapitates lizard.");
+		printf("Scissors decapitates lizard.\n");
+		break;
 	default:
+		printf("not accounted for.\n");
 		break;
 	}
 	again();
@@ -370,7 +375,7 @@ void again(void)
 {
 	int tmp;
 	int again;
-	printf("Play again? \nY - Yes \n N - No");
+	printf("Y - Yes \nN - No\nPlay again? ");
 	while ((tmp = getchar()) != '\n')
 		if (tmp > 94){
 		again = tmp - 32;
@@ -384,7 +389,7 @@ void again(void)
 			break;
 	
 		default:
-			printf("Closing...");
+			printf("Closing...\n");
 			exit(0);
 			break;
 	}
