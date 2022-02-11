@@ -166,29 +166,33 @@ int prompt(int request)
         int val;
         switch (request) {
                 case (1):
-                        printf("Length: ");
+                        printf("Please enter the length: ");
                         break;
 
                 case(2):
-                        printf("Width: ");
+                        printf("Please enter the width: ");
                         break;
 
                 case(3):
-                        printf("Base: ");
+                        printf("Please enter the  base: ");
                         break;
                 case(4):
-                        printf("Height: ");
+                        printf("Please enter the height: ");
                         break;
                 case(5):
-                        printf("Radius: ");
+                        printf("Please enter the radius: ");
                         break;
                 case(6):
-                        printf("Angles: ");
+                        printf("Please enter the amount of angles: ");
                         break;
                 default:
                         printf("This shouldn't appear");
                         break;
                 }
         scanf("%d", &val);
+        if (val < 0){
+                printf("Error| negatives do not mathematically work in "
+                "shapes.");
+        }
         return val;
 }
