@@ -1,0 +1,85 @@
+Script started on 2022-02-12 10:31:22-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ gcc -g -Wall ./functions.c ./lab2.c -lm -o [K[K[K[K
+[?2004l[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ ./[K/a.out 
+[?2004lSelect a geometry calculation 
+C. Circles
+P. Regular Polygon
+R. Rectangles
+T. Right Triangles
+Q. Exit 
+Enter your choice: t
+Select a triangle calculation 
+P. Perimeter
+A. Area
+H. hypotenuse
+B. Back 
+Enter your choice: a
+Please enter the height: 2
+Please enter the  base: 3
+The area of the triangle is 3.000000.
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ ./a.out gcc -g -Wall ./functions.c ./lab2.c -lm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./a.out [K
+[?2004lSelect a geometry calculation 
+C. Circles
+P. Regular Polygon
+R. Rectangles
+T. Right Triangles
+Q. Exit 
+Enter your choice: r
+Select a rectangle calculation 
+P. Perimeter
+A. Area
+R. Diagonal
+B. Back 
+Enter your choice: b
+Select a geometry calculation 
+C. Circles
+P. Regular Polygon
+R. Rectangles
+T. Right Triangles
+Q. Exit 
+Enter your choice: r
+Select a rectangle calculation 
+P. Perimeter
+A. Area
+R. Diagonal
+B. Back 
+Enter your choice: p
+Please enter the width: 4
+Please enter the length: 5
+The perimeter of the rectangle is 18.
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ ./a.out gcc -g -Wall ./functions.c ./lab2.c -lm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./a.out [K
+[?2004lSelect a geometry calculation 
+C. Circles
+P. Regular Polygon
+R. Rectangles
+T. Right Triangles
+Q. Exit 
+Enter your choice: c
+Select a circle calculation 
+C. Circumference
+A. Area
+B. Back 
+Enter your choice: c
+Please enter the radius: 7
+The circumference of the circle is 43.982296.
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ ./a.out gcc -g -Wall ./functions.c ./lab2.c -lm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./a.out [K
+[?2004lSelect a geometry calculation 
+C. Circles
+P. Regular Polygon
+R. Rectangles
+T. Right Triangles
+Q. Exit 
+Enter your choice: p
+Select a regular polygon calculation 
+I. Interior angles
+E. Exterior angles
+A. Area
+B. Back 
+Enter your choice: a
+Please enter the amount of angles: 6
+Please enter the length: 3
+The area of the polygon is 23.382687.
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ exit
+[?2004lexit
+
+Script done on 2022-02-12 10:33:00-07:00 [COMMAND_EXIT_CODE="0"]
