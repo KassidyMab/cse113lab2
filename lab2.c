@@ -65,6 +65,8 @@ int funcinp(void)
                 funcinp();
                 break;
         }
+        // Recursive loop thats ended by the user force quiting or using "Q"
+        main();
 
 
         return 0;
@@ -117,7 +119,7 @@ int regplop(void)
                 ans = area_regular_polygon(prompt(1), prompt(6));
                 printf("The area of the polygon is %f.\n", ans);
                 break;
-        case 'Q':
+        case 'B':
                 funcinp();
                 break;
         default:
