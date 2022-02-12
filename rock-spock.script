@@ -1,0 +1,206 @@
+Script started on 2022-02-11 22:54:43-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ exit[2Plsgcc -g -Wall ./rock-spock.c
+[?2004l[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ ls[K[K./a.out 
+[?2004lEnter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: R
+Player's play is ROCK
+Computer's play is SPOCK
+Computer wins!
+Spock vaporizes rock.
+Y - Yes 
+N - No
+Play again? N
+Closing...
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ ./a.out 
+[?2004lEnter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: R
+Player's play is ROCK
+Computer's play is PAPER
+Computer wins!
+Paper covers rock.
+Y - Yes 
+N - No
+Play again? Y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: S
+Player's play is SCISSORS
+Computer's play is PAPER
+Player wins!
+Scissors cuts papers.
+Y - Yes 
+N - No
+Play again? Y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: s
+Player's play is SCISSORS
+Computer's play is LIZARD
+Player wins!
+Scissors decapitates lizard.
+Y - Yes 
+N - No
+Play again? y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: s
+Player's play is SCISSORS
+Computer's play is ROCK
+Computer wins!
+Rock crushes scissors.
+Y - Yes 
+N - No
+Play again? n
+Closing...
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ s[K./a.out 
+[?2004lEnter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: s
+Player's play is SCISSORS
+Computer's play is SCISSORS
+An eternal battle with the same thing ensues.
+Y - Yes 
+N - No
+Play again? y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: l
+Player's play is LIZARD
+Computer's play is SPOCK
+Player wins!
+Lizard poisons Spock
+Y - Yes 
+N - No
+Play again? y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: l
+Player's play is LIZARD
+Computer's play is ROCK
+Computer wins!
+Rock crushes Lizard.
+Y - Yes 
+N - No
+Play again? y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: r
+Player's play is ROCK
+Computer's play is SCISSORS
+Player wins!
+Rock crushes scissors.
+Y - Yes 
+N - No
+Play again? n
+Closing...
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ ./a.out gcc -g -Wall ./rock-spock.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./a.out [K
+[?2004lEnter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: r
+Player's play is ROCK
+Computer's play is ROCK
+An eternal battle with the same thing ensues.
+Y - Yes 
+N - No
+Play again? y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: p
+Player's play is PAPER
+Computer's play is SCISSORS
+Computer wins!
+Scissors cuts papers.
+Y - Yes 
+N - No
+Play again? y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: v
+Player's play is SPOCK
+Computer's play is SPOCK
+An eternal battle with the same thing ensues.
+Y - Yes 
+N - No
+Play again? y
+Enter a move:
+R for ROCK
+P for PAPER
+S for SCISSORS
+L for LIZARD
+V for SPOCK
+Q to have SPOCK eat a ROCK while chasing a LIZARD and quit
+Move: l
+Player's play is LIZARD
+Computer's play is SPOCK
+Player wins!
+Lizard poisons Spock
+Y - Yes 
+N - No
+Play again? n
+Closing...
+[?2004h]0;kas@pop-os: ~/homework[01;32mkas@pop-os[00m:[01;34m~/homework[00m$ exit
+[?2004lexit
+
+Script done on 2022-02-11 22:56:01-07:00 [COMMAND_EXIT_CODE="0"]
