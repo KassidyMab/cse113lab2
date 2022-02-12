@@ -1,12 +1,12 @@
 /**
  * @file rock-spock.c
- * @date 2022/2/11
  * @brief Play Rock-paper-scissors-lizard-Spock against the machine
  * @details A program that plays a modified version of rock paper scissors.
  * Where it will be played against a machine that randomly picked a choice
  * out of rock, spock, paper, scissors, or lizard.
  * 
  * @author Kassidy Maberry
+ * @date 2022/2/11
  * @bugs None
  * @todo Complete
  */
