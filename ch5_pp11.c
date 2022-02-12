@@ -1,5 +1,13 @@
 /**
+ * @file ch5_pp11.c
+ * @brief Prints out a two digit number as a word
+ * @details A program that prints out a given two digit number
+ * into the word of it.
  * 
+ * @author Kassidy Maberry
+ * @date 2022/2/10
+ * @bug None
+ * @todo None
  */
 
 #include <stdio.h>
@@ -27,7 +35,10 @@ int main(void)
         return 0;
 }
 
-
+/**
+ * A function that gathers a user's input and checks if it is acceptable
+ * @return The users input.
+ */
 int input(void)
 {
         int num;
@@ -45,6 +56,12 @@ int input(void)
 
 }
 
+/**
+ * If the number is 10-19 it will print out said number. Otherwise it states
+ * you arent supposed to see this message. Uses the place to print out
+ * the first part
+ * @param num the number the function uses to find its spelling.
+ */
 int teens(int num)
 {
         switch (num)
@@ -86,6 +103,11 @@ int teens(int num)
 }
 
 
+/**
+ * figures out the tens place number if it is above 19. Prints out the
+ * tens place spelling of the digit
+ * @param num the total number the function is given.
+ */
 int tens(int num)
 {
         int tens = num/10;
@@ -122,7 +144,13 @@ int tens(int num)
         return 0;
 }
 
-
+/**
+ * Figures out the ones place by modulating by 10 and using the reminader
+ * to find which switch statement to activate. If there is a 0 it wont
+ * print out anything however anything else prints out the letter
+ * and a "-".
+ * @param num The number the user gives to find the ones place of.
+ */
 int ones(int num)
 {
         int one = num % 10;
