@@ -1,11 +1,14 @@
 /**
  * @file rock-spock.c
- * @author
- * @date
+ * @author Kassidy Maberry
+ * @date 2022/2/11
  * @brief Play Rock-paper-scissors-lizard-Spock against the machine
+ * @details A program that plays a modified version of rock paper scissors.
+ * Where it will be played against a machine that randomly picked a choice
+ * out of rock, spock, paper, scissors, or lizard.
  * 
- * @todo Upgrade the player input method, make the function that decides the
- * winner, make the final function to announce the winner.
+ * @bugs None
+ * @todo Complete
  */
 #include <stdio.h>
 #include <time.h>
@@ -196,10 +199,10 @@ int winner(int computer, int player)
 				senario = 3;
 				break;
 			case LIZARD:
-				senario = 2;
+				senario = 6;
 				break;
 			case SCISSORS:
-				senario = 4;
+				senario = 8;
 				break;
 
 		}
@@ -208,16 +211,16 @@ int winner(int computer, int player)
 		switch (player)
 		{
 			case ROCK:
-				senario = 6;
+				senario = 4;
 				break;
 			case SPOCK:
-				senario = 8;
+				senario = 10;
 				break;
 			case SCISSORS:
-				senario = 5;
+				senario = 11;
 				break;
 			case LIZARD:
-				senario = 7;
+				senario = 13;
 				break;
 		}
 		break;
@@ -228,13 +231,13 @@ int winner(int computer, int player)
 				senario = 9;
 				break;
 			case ROCK:
-				senario = 10;
+				senario = 2;
 				break;
 			case LIZARD:
-				senario = 11;
+				senario = 15;
 				break;
 			case SCISSORS:
-				senario = 12;
+				senario = 18;
 				break;
 		
 		}
@@ -246,13 +249,13 @@ int winner(int computer, int player)
 				senario = 14;
 				break;
 			case ROCK:
-				senario = 13;
+				senario = 5;
 				break;
 			case SPOCK:
-				senario = 18;
+				senario = 16;
 				break;
 			case SCISSORS:
-				senario = 16;
+				senario = 19;
 				break;
 		
 		}
@@ -261,13 +264,13 @@ int winner(int computer, int player)
 		switch (player)
 		{
 			case PAPER:
-				senario = 22;
+				senario = 12;
 				break;
 			case ROCK:
-				senario = 21;
+				senario = 7;
 				break;
 			case SPOCK:
-				senario = 19;
+				senario = 18;
 				break;
 			case LIZARD:
 				senario = 20;
@@ -293,16 +296,16 @@ void print_winner(int senario, int comp_move, int player_move)
 {
 
 	if (senario == 0){
-		printf("An eternal battle with the same thing ensues.");
+		printf("An eternal battle with the same thing ensues.\n");
 		again();
 	} else {
 		switch (senario%2)
 		{
-		case 0:
+		case 1:
 			printf("Player wins!\n");
 			break;
 		
-		case 1:
+		case 0:
 			printf("Computer wins!\n");
 			break;
 		}	
@@ -310,42 +313,42 @@ void print_winner(int senario, int comp_move, int player_move)
 	switch (senario)
 	{
 	case 1:
-	case 10:
+	case 2:
 		printf("Spock vaporizes rock.\n");
 		break;
 	case 3:
-	case 6:
+	case 4:
 		printf("Paper covers rock.\n");
 		break;
-	case 2:
-	case 13:
+	case 5:
+	case 6:
 		printf("Rock crushes Lizard.\n");
 		break;
-	case 4:
-	case 21:
+	case 7:
+	case 8:
 		printf("Rock crushes scissors.\n");
 		break;
-	case 8:
 	case 9:
+	case 10:
 		printf("Paper disproves Spock.\n");
 		break;
-	case 5:
-	case 22:
+	case 11:
+	case 12:
 		printf("Scissors cuts papers.\n");
 		break;
-	case 7:
+	case 13:
 	case 14:
 		printf("Lizard eats paper.\n");
 		break;
-	case 11:
-	case 18:
+	case 15:
+	case 16:
 		printf("Lizard poisons Spock\n");
 		break;
-	case 12:
-	case 19:
+	case 17:
+	case 18:
 		printf("Spock smashes Scissors.\n");
 		break;
-	case 16:
+	case 19:
 	case 20:
 		printf("Scissors decapitates lizard.\n");
 		break;
