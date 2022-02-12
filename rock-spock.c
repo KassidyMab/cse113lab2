@@ -1,12 +1,12 @@
 /**
  * @file rock-spock.c
- * @author Kassidy Maberry
  * @date 2022/2/11
  * @brief Play Rock-paper-scissors-lizard-Spock against the machine
  * @details A program that plays a modified version of rock paper scissors.
  * Where it will be played against a machine that randomly picked a choice
  * out of rock, spock, paper, scissors, or lizard.
  * 
+ * @author Kassidy Maberry
  * @bugs None
  * @todo Complete
  */
@@ -115,8 +115,7 @@ int pinput(void)
  */
 int pcheck(int player)
 {
-	switch (player)
-	{
+	switch (player){
 	case ROCK:
 		break;
 	case SCISSORS:
@@ -187,11 +186,9 @@ int winner(int computer, int player)
 		return senario;
 	}
 	// Odd = player victory; even = computer victory.
-	switch (computer)
-	{
+	switch (computer){
 	case ROCK:
-		switch (player)
-		{
+		switch (player){
 			case SPOCK:
 				senario = 1;
 				break;
@@ -208,8 +205,7 @@ int winner(int computer, int player)
 		}
 		break;
 	case PAPER:
-		switch (player)
-		{
+		switch (player){
 			case ROCK:
 				senario = 4;
 				break;
@@ -225,8 +221,7 @@ int winner(int computer, int player)
 		}
 		break;
 	case SPOCK:
-		switch (player)
-		{
+		switch (player){
 			case PAPER:
 				senario = 9;
 				break;
@@ -243,8 +238,7 @@ int winner(int computer, int player)
 		}
 		break;
 	case LIZARD:
-		switch (player)
-		{
+		switch (player){
 			case PAPER:
 				senario = 14;
 				break;
@@ -261,8 +255,7 @@ int winner(int computer, int player)
 		}
 		break;
 	case SCISSORS:
-		switch (player)
-		{
+		switch (player){
 			case PAPER:
 				senario = 12;
 				break;
@@ -310,8 +303,7 @@ void print_winner(int senario, int comp_move, int player_move)
 			break;
 		}	
 	}
-	switch (senario)
-	{
+	switch (senario){
 	case 1:
 	case 2:
 		printf("Spock vaporizes rock.\n");
@@ -385,8 +377,7 @@ void again(void)
 		} else {
 		again = tmp;
 		}
-	switch (again)
-	{
+	switch (again){
 		case 'Y':
 			main();
 			break;
