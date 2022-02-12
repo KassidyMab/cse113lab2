@@ -29,7 +29,7 @@ float circumference(int radi);
 float diagonal_rectangle(int len, int wid);
 float exterior_angle(int angles);
 float interior_angle(int angles);
-float area_regular_polygon(int side, int angles);
+float area_regular_polygon(float side, float angles);
 int prompt(int request);
 
 
@@ -150,7 +150,7 @@ float interior_angle(int angles)
  * @param angles The amount of angles/sides on the polygon.
  * @return The length of the regular polygon.
  */
-float area_regular_polygon(int side, int angles)
+float area_regular_polygon(float side, float angles)
 {
         return (pow(side, 2) * angles / (4 * tan(M_PI / angles)));
 }

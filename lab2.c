@@ -1,33 +1,30 @@
 /**
  * @file lab2.c
- *
- * @author Nicholas Crepeau
- *
- * @date 1/1/2019
- *
- * Assignment: Lab 2
- *
- * @brief A program that uses the function in functions.c
- *
- * @details
- *
- * @bugs none
- *
- * @todo none
+ * @brief A calculator for various geometric shapes.
+ * @details A program that calculates the perimeter or area for varoius
+ * shapes. It can do it for triangles, regular polygons, circles, and
+ * rectangles.
+ * 
+ * @author Kassidy Maberry
+ * @date 2022/2/11
+ * @bugs None
+ * @todo comments
  */
 
 #include "functions.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 char input(void);
+int funcinp(void);
+int regplop(void);
+int circop(void);
+int rectop(void);
+int triop(void);
 
 int main(void) 
 {
-        int area = area_regular_polygon(prompt(1), prompt(1));
-        int h = 2;
-        int w = 3;
-
-        printf("A rectangle with height %d and width %d has an area of %d.\n", h, w, area);
+        funcinp();
 
         return 0;
 }
@@ -37,14 +34,13 @@ int funcinp(void)
 {
         char op;
         printf("Select a geometry calculation \nC. Circles\nP. " 
-        "Regular Polygon\nR. Rectangles\n T. Right Triangles\n"
+        "Regular Polygon\nR. Rectangles\nT. Right Triangles\n"
         "Q. Exit \nEnter your choice: ");
         op = input();
 
-        switch (op)
-        {
+        switch (op){
         case 'P':
-                regpolop();
+                regplop();
                 break;
         case 'C':
                 circop();
@@ -71,28 +67,28 @@ int funcinp(void)
 
 char input(void)
 {
-        int tmp, op;
-        while(tmp = getchar() != "\n"){
-                op = tmp;
-                if (op > 94){
-                        op = op - 32;
-                }
-        }
+        int op;
+        char tmp;
+	while ((tmp = getchar()) != '\n')
+		if (tmp > 94){
+                op = tmp - 32;
+		} else {
+		op = tmp;
+		}
         return op;
 }
 
 
-int regpolop(void)
+int regplop(void)
 {
         float ans;
         char op;
-        printf("Select a Regular polygon calculation \nI. Interior angles\nE."
+        printf("Select a regular polygon calculation \nI. Interior angles\nE."
         " Exterior angles\nA. Area\nB. Back \nEnter your choice: ");
 
         op = input();
 
-        switch (op)
-        {
+        switch (op){
         case 'I':
                 ans = interior_angle(prompt(6));
                 printf("Each interior angle is %f degrees.\n", ans);
@@ -103,14 +99,14 @@ int regpolop(void)
                 break;
         case 'A':
                 ans = area_regular_polygon(prompt(1), prompt(6));
-                printf("The area of the function is %f.\n", ans);
+                printf("The area of the polygon is %f.\n", ans);
                 break;
         case 'Q':
                 funcinp();
                 break;
         default:
                 printf("Unaccepted input.");
-                regpolop();
+                regplop();
                 break;
         }
 
@@ -124,13 +120,12 @@ int circop(void)
 {
         float ans;
         char op;
-        printf("Select a geometry calculation \nC. Circumference" 
+        printf("Select a circle calculation \nC. Circumference" 
         "\nA. Area\nB. Back \nEnter your choice: ");
 
         op = input();
 
-        switch (op)
-        {
+        switch (op){
         case 'C':
                 ans = circumference(prompt(5));
                 printf("The circumference of the circle is %f.\n", ans);
@@ -144,7 +139,7 @@ int circop(void)
                 break;
         
         default:
-                printf("Unaccepted input.");
+                printf("Unaccepted input.\n");
                 circop();
                 break;
         }
@@ -156,27 +151,31 @@ int circop(void)
 int rectop(void)
 {
         int ans;
+        float rans;
         char op;
-        printf("Select a geometry calculation \nP. Perimeter" 
-        "\nA. Area\nB. Back \nEnter your choice: ");
+        printf("Select a rectangle calculation \nP. Perimeter" 
+        "\nA. Area\nR. Diagonal\nB. Back \nEnter your choice: ");
 
         op = input();
 
-        switch (op)
-        {
+        switch (op){
         case 'P':
                 ans = perimeter_rectangle(prompt(1), prompt(2));
-                printf("The perimeter is %d", ans);
+                printf("The perimeter of the rectangle is %d.\n", ans);
                 break;
         case 'A':
                 ans = area_rectangle(prompt(1), prompt(2));
-                printf("The area is %d", ans);
+                printf("The area of the rectangle is %d.\n", ans);
                 break;
+        case 'R':
+                rans = diagonal_rectangle(prompt(4), prompt(2));
+                printf("The length of the rectangle is %lf.\n", rans);
+                break; 
         case 'B':
                 funcinp();
                 break; 
         default:
-                printf("Unnaccepted input");
+                printf("Unnaccepted input.\n");
                 rectop();
                 break;
         }
@@ -188,7 +187,7 @@ int triop(void)
 {
         float ans;
         char op;
-        printf("Select a geometry calculation \nP. Perimeter" 
+        printf("Select a triangle calculation \nP. Perimeter" 
         "\nA. Area\nH. hypotenuse\nB. Back \nEnter your choice: ");
 
         op = input();
@@ -196,21 +195,21 @@ int triop(void)
         switch (op){
                 case 'A':
                         ans = area_triangle(prompt(3), prompt(4));
-                        printf("The area of the triangle is %d", ans);
+                        printf("The area of the triangle is %lf.\n", ans);
                         break;
                 case 'P':
                         ans = perimeter_triangle(prompt(3), prompt(4));
-                        printf("The area of the triangle is %d", ans);
+                        printf("The area of the triangle is %lf.\n", ans);
                         break; 
                 case 'H':
                         ans = hypotenuse(prompt(3), prompt(4));
-                        printf("The hypotenuse is %d", ans);
+                        printf("The hypotenuse is %lf.\n", ans);
                         break;
                 case 'B':
                         funcinp();
                         break;
                 default:
-                        printf("Unaccepted input.");
+                        printf("Unaccepted input.\n");
                         break;
         }
 
