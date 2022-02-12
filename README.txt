@@ -29,4 +29,5 @@ Conclusion
 
 - The calculator could not immediately end upon the user having its single
     operation completed.
+   
 -----
