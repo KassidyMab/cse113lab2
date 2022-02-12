@@ -22,6 +22,8 @@ int circop(void);
 int rectop(void);
 int triop(void);
 
+
+
 int main(void) 
 {
         funcinp();
@@ -29,7 +31,11 @@ int main(void)
         return 0;
 }
 
-
+/**
+ * This function will call upon more specified functions that deal with
+ * the requested geometric operations.
+ * @return 0
+ */
 int funcinp(void)
 {
         char op;
@@ -64,12 +70,17 @@ int funcinp(void)
         return 0;
 }
 
-
+/**
+ * The basic input method for the function. It grabs a character
+ * signified before it is called.
+ * @return the given character
+ */
 char input(void)
 {
         int op;
         char tmp;
 	while ((tmp = getchar()) != '\n')
+        // checks if it is lowercase or not.
 		if (tmp > 94){
                 op = tmp - 32;
 		} else {
@@ -78,7 +89,12 @@ char input(void)
         return op;
 }
 
-
+/**
+ * Functions that deal with geometry involving regular polygons. 
+ * Upon calling a requested fucntion it then gives a print statement
+ * for the answer.
+ * @return 0
+ */
 int regplop(void)
 {
         float ans;
@@ -115,7 +131,11 @@ int regplop(void)
         return 0;
 }
 
-
+/**
+ * Functions that deal with geometry circles. After calling the needed
+ * function it will then print the result in a printf statement.
+ * @return 0
+ */
 int circop(void)
 {
         float ans;
@@ -147,7 +167,11 @@ int circop(void)
         return 0;
 }
 
-
+/**
+ * Functions that deal with geometry involving rectangles. After calling the
+ * needed function it will then print the result in a printf statement.
+ * @return 0
+ */
 int rectop(void)
 {
         int ans;
@@ -183,6 +207,11 @@ int rectop(void)
         return 0;
 }
 
+/**
+ * Functions that deal with geometry involving triangles. After calling the
+ * needed function it will then print the result in a printf statement.
+ * @return 0
+ */
 int triop(void)
 {
         float ans;

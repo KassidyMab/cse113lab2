@@ -1,9 +1,9 @@
 /**
  * @file functions.h
  *
- * @author Nicholas Crepeau
+ * @author Kassidy Maberry
  *
- * @date 1/1/2019
+ * @date 2/10/2022
  *
  * Assignment: Lab 2
  *
