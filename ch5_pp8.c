@@ -5,7 +5,7 @@
  * and its arrival time.
  * 
  * @author Kassidy Maberry
- * @date 2/10/22
+ * @date 2022/2/10
  * @bug None
  * @todo doxygenize
  */
@@ -102,8 +102,7 @@ int closetime(int utime)
  */
 int flights(int time)
 {
-        switch (time)
-        {
+        switch (time){
         case 0:
                 printf("Closest departure 8:00 a.m., arriving at 10:16 a.m.");
                 break;
